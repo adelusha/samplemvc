@@ -1,0 +1,15 @@
+2015-05-07 14:20:04,025 [1] [] INFO  - Service Desk SVC started... 
+2015-05-07 14:20:29,847 [13] [] INFO  - Getting all Software Types. 
+2015-05-07 14:20:30,071 [13] [] DEBUG - Mapping Entity to Software Asset Type View Model. 
+2015-05-07 14:20:30,072 [13] [] DEBUG - Mapping Entity to Software Asset Type View Model. 
+2015-05-07 14:20:30,072 [13] [] DEBUG - Mapping Entity to Software Asset Type View Model. 
+2015-05-07 14:20:33,978 [11] [] INFO  - Getting all Software assets. 
+2015-05-07 14:20:34,159 [11] [] DEBUG - Mapping Entity to Software Asset View Model. 
+2015-05-07 14:20:34,842 [11] [] DEBUG - Mapping Entity to Software Asset View Model. 
+2015-05-07 14:20:52,656 [14] [] INFO  - Getting single Software Asset with ID of 1 
+2015-05-07 14:20:52,823 [14] [] DEBUG - Mapping Entity to Software Asset View Model. 
+2015-05-07 14:21:18,819 [13] [] INFO  - Getting all Software assets. 
+2015-05-07 14:21:18,963 [13] [] DEBUG - Mapping Entity to Software Asset View Model. 
+2015-05-07 14:21:19,503 [13] [] DEBUG - Mapping Entity to Software Asset View Model. 
+2015-05-07 14:21:33,804 [15] [] INFO  - Getting single Software Asset with ID of 1 
+2015-05-07 14:21:33,948 [15] [] DEBUG - Mapping Entity to Software Asset View Model. 

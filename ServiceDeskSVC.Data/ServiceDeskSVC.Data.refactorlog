@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="d7934405-d9c6-499f-a21c-0e5909c906f8" ChangeDateTime="02/25/2015 16:19:25">
+    <Property Name="ElementName" Value="[dbo].[FK_TicketComments_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[TicketComments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_TicketComments_ToTickets]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="776f691f-8561-42f0-b6eb-7f6dd2f1fb4d" ChangeDateTime="02/25/2015 16:19:32">
+    <Property Name="ElementName" Value="[dbo].[FK_TicketComments_ToTickets]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[TicketComments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_TicketCommentsTickeID_ToTicketsID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a3f3af44-2d3e-4967-92d8-467a782bcafa" ChangeDateTime="02/25/2015 16:19:42">
+    <Property Name="ElementName" Value="[dbo].[FK_TicketCommentsTickeID_ToTicketsID]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[TicketComments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_TicketCommentsTicketID_ToTicketsID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6531cae5-6bc7-4178-99ec-7e6e240eaa87" ChangeDateTime="02/25/2015 19:15:23">
+    <Property Name="ElementName" Value="[dbo].[Tickets].[CategoryID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tickets]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TicketCategoryID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a3e82923-45e4-4240-bb77-6e3160a32583" ChangeDateTime="02/26/2015 15:06:07">
+    <Property Name="ElementName" Value="[dbo].[HelpDesk_Tickets].[IsApproved]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HelpDesk_Tickets]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NeedsApproval" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b3de0fa1-e0f2-4cef-8801-af32563f72b9" ChangeDateTime="03/03/2015 13:59:09">
+    <Property Name="ElementName" Value="[dbo].[HelpDesk_Tasks].[RequestDateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HelpDesk_Tasks]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedDateTiem" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="52322f57-0eec-4cb0-b508-56d9c4c91612" ChangeDateTime="03/03/2015 13:59:12">
+    <Property Name="ElementName" Value="[dbo].[HelpDesk_Tasks].[CreatedDateTiem]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HelpDesk_Tasks]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="23b9b87f-d317-462a-bb6a-21ca5e9a3a84" ChangeDateTime="03/03/2015 14:15:44">
+    <Property Name="ElementName" Value="[dbo].[HelpDesk_TicketDocuments].[Document]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HelpDesk_TicketDocuments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DocumentPath" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="575b4b8e-4431-45b4-ac69-96543f63b336" ChangeDateTime="03/18/2015 14:36:36">
+    <Property Name="ElementName" Value="[dbo].[HelpDesk_TicketComments].[IX_HelpDesk_TicketComments_Id]" />
+    <Property Name="ElementType" Value="SqlIndex" />
+    <Property Name="ParentElementName" Value="[dbo].[HelpDesk_TicketComments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[IX_HelpDesk_TicketComments_CommentDateTime]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="299aa104-e57f-4180-b759-e95abec2948b" ChangeDateTime="03/27/2015 13:24:53">
+    <Property Name="ElementName" Value="[dbo].[HelpDesk_TicketAttachments].[Attachment]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HelpDesk_TicketAttachments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Data" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dd86a063-c005-46b0-8a94-242da12e62d8" ChangeDateTime="03/27/2015 13:48:29">
+    <Property Name="ElementName" Value="[dbo].[FK_ServiceDesk_Users_ToNSLocations]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ServiceDesk_Users]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ServiceDesk_Users_ToNSLocations_Id]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f5ebdded-0767-454b-9a71-6a902862661c" ChangeDateTime="03/31/2015 15:14:17">
+    <Property Name="ElementName" Value="[dbo].[AssetManager_Models].[SupportWebsitr]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AssetManager_Models]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SupportWebsite" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e6de9ed4-acbf-4e5a-b2d3-3151ca623408" ChangeDateTime="03/31/2015 15:15:37">
+    <Property Name="ElementName" Value="[dbo].[AssetManager_Models].[CreatedBy]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AssetManager_Models]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedById" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="132a78ed-f8d9-410e-95d2-bfc6c135e285" ChangeDateTime="03/31/2015 15:15:39">
+    <Property Name="ElementName" Value="[dbo].[AssetManager_Models].[ModifiedBy]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AssetManager_Models]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ModifiedById" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="283eabbd-1a29-4f8e-be08-9d571ee9ca96" ChangeDateTime="03/31/2015 18:25:26">
+    <Property Name="ElementName" Value="[dbo].[AssetManager_Hardware].[OldDepartment]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AssetManager_Hardware]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OldDepartmentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="621a1de7-a281-4fd6-a7f0-3c72f3be3b33" ChangeDateTime="03/31/2015 18:26:43">
+    <Property Name="ElementName" Value="[dbo].[AssetManager_Hardware].[OldDepartmentId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AssetManager_Hardware]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OldAssignedToId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="31bd686c-72e7-4189-9225-6c3a86e868fe" ChangeDateTime="03/31/2015 19:19:33">
+    <Property Name="ElementName" Value="[dbo].[AssetManager_Software].[Title]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AssetManager_Software]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ef94e740-1ada-4fbb-b6e9-d845a1d23a89" ChangeDateTime="04/10/2015 19:10:26">
+    <Property Name="ElementName" Value="[dbo].[AssetManager_Hardware].[HardwareAssetId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AssetManager_Hardware]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HardwareAssetNumber" />
+  </Operation>
+</Operations>

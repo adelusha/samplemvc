@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[HelpDesk_TaskStatus]
+(
+	[Id] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [Status] NVARCHAR(50) NOT NULL
+)

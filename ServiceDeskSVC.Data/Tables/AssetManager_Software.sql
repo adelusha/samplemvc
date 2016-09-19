@@ -1,0 +1,31 @@
+﻿CREATE TABLE [dbo].[AssetManager_Software]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[SoftwareAssetNumber] INT NOT NULL,
+    [Name] NVARCHAR(100) NOT NULL, 	
+    [SoftwareTypeId] INT NOT NULL, 
+    [ProductOwnerId] INT NULL, 
+    [ProductUsersId] INT NULL, 
+    [SupportingCompanyId] INT NULL, 
+    [AssociatedCompanyId] INT NULL, 
+    [PublisherId] INT NOT NULL, 
+    [AccountingReqNumber] NVARCHAR(100) NOT NULL, 
+    [Notes] NVARCHAR(MAX) NULL, 
+    [LicensingInfo] NVARCHAR(MAX) NULL, 
+    [DateOfPurchase] DATETIME2(0) NOT NULL, 
+    [EndOfSupportDate] DATETIME2(0) NULL, 
+    [LicenseCount] INT NULL,
+	[CreatedDate] DATETIME2(0) NOT NULL, 
+    [CreatedById] INT NOT NULL, 
+    [ModifiedDate] DATETIME2(0) NULL, 
+    [ModifiedById] INT NULL,
+	CONSTRAINT [FK_AssetManager_Software_SoftwareTypeId_ToAssetManager_Software_AssetType_Id] FOREIGN KEY ([SoftwareTypeId]) REFERENCES [AssetManager_Software_AssetType]([Id]),
+	CONSTRAINT [FK_AssetManager_Software_ProductOwnerId_ToServiceDesk_Users_Id] FOREIGN KEY ([ProductOwnerId]) REFERENCES [ServiceDesk_Users]([Id]),
+	CONSTRAINT [FK_AssetManager_Software_ProductUsersId_ToServiceDesk_Users_Id] FOREIGN KEY ([ProductUsersId]) REFERENCES [ServiceDesk_Users]([Id]),
+	CONSTRAINT [FK_AssetManager_Software_SupportingCompanyId_ToAssetManager_Companies_Id] FOREIGN KEY ([SupportingCompanyId]) REFERENCES [AssetManager_Companies]([Id]),
+	CONSTRAINT [FK_AssetManager_Software_AssociatedCompanyId_ToAssetManager_Companies_Id] FOREIGN KEY ([AssociatedCompanyId]) REFERENCES [AssetManager_Companies]([Id]),
+	CONSTRAINT [FK_AssetManager_Software_ModifiedById_ToAssetManager_Users_Id] FOREIGN KEY ([PublisherId]) REFERENCES [ServiceDesk_Users]([Id]),
+	CONSTRAINT [FK_AssetManager_Software_CreatedById_ToServiceDesk_Users_Id] FOREIGN KEY ([CreatedById]) REFERENCES [ServiceDesk_Users]([Id]),
+	CONSTRAINT [FK_AssetManager_Software_ModifiedById_ToServiceDesk_Users_Id] FOREIGN KEY ([ModifiedById]) REFERENCES [ServiceDesk_Users]([Id])
+
+)

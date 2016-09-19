@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38731686-F011-4001-8F0F-F1C3F920DB80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceDeskSVC.DataAccess</RootNamespace>
+    <AssemblyName>ServiceDeskSVC.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Dev\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <OutputPath>bin\QA\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <OutputPath>bin\Prod\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi">
+      <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssetManager\IAssetManagerCompaniesRepository.cs" />
+    <Compile Include="AssetManager\IAssetManagerSoftwareRepository.cs" />
+    <Compile Include="AssetManager\IAssetManagerHardwareAssetTypeRepository.cs" />
+    <Compile Include="AssetManager\IAssetManagerSoftwareAssetTypeRepository.cs" />
+    <Compile Include="AssetManager\IAssetManagerModelsRepository.cs" />
+    <Compile Include="IHelpDeskTasksStatusRepository.cs" />
+    <Compile Include="IHelpDeskTasksRepository.cs" />
+    <Compile Include="IHelpDeskTicketCategoryRepository.cs" />
+    <Compile Include="IHelpDeskTicketRepository.cs" />
+    <Compile Include="IHelpDeskTicketCommentRepository.cs" />
+    <Compile Include="AssetManager\IAssetManagerHardwareAssetRepository.cs" />
+    <Compile Include="INSDepartmentRepository.cs" />
+    <Compile Include="INSUserRepository.cs" />
+    <Compile Include="INSLocationRepository.cs" />
+    <Compile Include="IHelpDeskTicketTypeRepository.cs" />
+    <Compile Include="Models\AssetManager_AssetAttachments.cs" />
+    <Compile Include="Models\AssetManager_AssetStatus.cs" />
+    <Compile Include="Models\AssetManager_Companies.cs" />
+    <Compile Include="Models\AssetManager_Hardware.cs" />
+    <Compile Include="Models\AssetManager_Hardware_AssetType.cs" />
+    <Compile Include="Models\AssetManager_Models.cs" />
+    <Compile Include="Models\AssetManager_Software.cs" />
+    <Compile Include="Models\AssetManager_Software_AssetType.cs" />
+    <Compile Include="Models\HelpDesk_Tasks.cs" />
+    <Compile Include="Models\HelpDesk_TaskStatus.cs" />
+    <Compile Include="Models\HelpDesk_Tasks_RelatedTasks.cs" />
+    <Compile Include="Models\HelpDesk_TicketAttachments.cs" />
+    <Compile Include="Models\HelpDesk_TicketDocuments.cs" />
+    <Compile Include="Models\Mapping\AssetManager_AssetAttachmentsMap.cs" />
+    <Compile Include="Models\Mapping\AssetManager_AssetStatusMap.cs" />
+    <Compile Include="Models\Mapping\AssetManager_CompaniesMap.cs" />
+    <Compile Include="Models\Mapping\AssetManager_HardwareMap.cs" />
+    <Compile Include="Models\Mapping\AssetManager_Hardware_AssetTypeMap.cs" />
+    <Compile Include="Models\Mapping\AssetManager_ModelsMap.cs" />
+    <Compile Include="Models\Mapping\AssetManager_SoftwareMap.cs" />
+    <Compile Include="Models\Mapping\AssetManager_Software_AssetTypeMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_TasksMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_TaskStatusMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_Tasks_RelatedTasksMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_TicketAttachmentsMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_TicketDocumentsMap.cs" />
+    <Compile Include="Models\Mapping\ServiceDesk_UsersMap.cs" />
+    <Compile Include="Models\ServiceDeskContext.cs" />
+    <Compile Include="Models\ServiceDesk_Users.cs" />
+    <Compile Include="Repositories\AssetManager\AssetManagerModelRepository.cs" />
+    <Compile Include="Repositories\AssetManager\AssetManagerHardwareAssetRepository.cs" />
+    <Compile Include="Repositories\AssetManager\AssetManagerHardwareTypeRepository.cs" />
+    <Compile Include="Repositories\AssetManager\AssetManagerCompaniesRepository.cs" />
+    <Compile Include="Repositories\AssetManager\AssetManagerSoftwareRepository.cs" />
+    <Compile Include="Repositories\AssetManager\AssetManagerSoftwareTypeRepository.cs" />
+    <Compile Include="Repositories\HelpDeskTicketDocumentRepository.cs" />
+    <Compile Include="Repositories\HelpDeskTaskRepository.cs" />
+    <Compile Include="Repositories\HelpDeskTicketRepository.cs" />
+    <Compile Include="Repositories\HelpDeskTicketCommentRepository.cs" />
+    <Compile Include="Repositories\HelpDeskTaskStatusRepository.cs" />
+    <Compile Include="Repositories\NSUserRepository.cs" />
+    <Compile Include="Repositories\NSDepartmentRepository.cs" />
+    <Compile Include="Repositories\NSLocationRepository.cs" />
+    <Compile Include="Repositories\HelpDeskTicketTypeRepository.cs" />
+    <Compile Include="Repositories\HelpDeskTicketCategoryRepository.cs" />
+    <Compile Include="Repositories\HelpDeskTicketStatusRepository.cs" />
+    <Compile Include="IHelpDeskTicketDocumentRepository.cs" />
+    <Compile Include="IHelpDeskTicketStatusRepository.cs" />
+    <Compile Include="Models\C__RefactorLog.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\HelpDesk_TicketCategory.cs" />
+    <Compile Include="Models\HelpDesk_TicketComments.cs" />
+    <Compile Include="Models\HelpDesk_Tickets.cs" />
+    <Compile Include="Models\HelpDesk_TicketStatus.cs" />
+    <Compile Include="Models\HelpDesk_TicketType.cs" />
+    <Compile Include="Models\Mapping\C__RefactorLogMap.cs" />
+    <Compile Include="Models\Mapping\DepartmentMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_TicketCategoryMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_TicketCommentsMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_TicketsMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_TicketStatusMap.cs" />
+    <Compile Include="Models\Mapping\HelpDesk_TicketTypeMap.cs" />
+    <Compile Include="Models\Mapping\NSLocationMap.cs" />
+    <Compile Include="Models\NSLocation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\UserRefresh\UserRefreshRepository.cs" />
+    <Compile Include="UserRefresh\IUserRefreshRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ILogging\ILogging.csproj">
+      <Project>{37e21b7e-a800-4ee9-9269-f0ef1265e20a}</Project>
+      <Name>ILogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceDeskSVC.Data\ServiceDeskSVC.Data.sqlproj">
+      <Project>{b9a97cdd-1de2-4dee-9255-73b321e16df0}</Project>
+      <Name>ServiceDeskSVC.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
